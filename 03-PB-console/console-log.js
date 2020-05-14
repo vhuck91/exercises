@@ -16,11 +16,11 @@ console.log(firstName, lastName);
 // 4. Task
 firstName = "John";
 lastName = "Doe";
-let age = "29";
+let age = 29;
 let myTask = "Write code xy!";
 let city = "Houston";
-let myProfile = (firstName + lastName + age + city + myTask);
-console.log(myProfile);
+// let myProfile = (firstName + lastName + age + city + myTask);
+console.log(firstName, lastName, age, city, myTask);
 
 //5.Task
-console.log(firstName + lastName, "is", + age, "years old. Helives in " + city, "and will " + myTask);
+console.log(firstName, lastName, "is", + age, "years old. Helives in " + city, "and will " + myTask);
