@@ -47,7 +47,7 @@ console.log(resultTwo);
 
 // 7 Task
 console.log((a += 1)); 
-console.log((a ++));// wait what
+console.log((++a));// wait what
 
 // 8 Task
 console.log((a -= 1));
