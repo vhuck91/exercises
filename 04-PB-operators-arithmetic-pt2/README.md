@@ -16,7 +16,7 @@ Q3. Calculate the percentage of 17/30. Expected output: number%
 
 Q4. Calculate the perimeter of a square. Assume each side is 4.75cm.
 
-Q5. Calculate the perimeter of a triangle. Assume the length of the sides are 5cm, 6cm, 7cm.
+Q5. Casrimeter of a triangle. Assume the length of the sides are 5cm, 6cm, 7cm.
 
 Q6. Calculate the area of a square. Each side is 5cm.
 
