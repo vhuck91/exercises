@@ -6,7 +6,6 @@ console.log(isDog ? "pat pat" : "find me a dog to pat!")
 
 /*
 let dog = true;
-
 (name === true) ? console.log("pat pat") : console.log("find me a dog to pat!");
 */
 
