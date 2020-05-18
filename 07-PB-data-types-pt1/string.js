@@ -1,4 +1,4 @@
-"use strickt"
+"use strict";
 
 // 01
 let myVariable = "Placeholder.";
@@ -20,20 +20,18 @@ let year = 1991;
 console.log("Answer 5//\n" + year);
 
 // 06
-console.log("Answer 6//\n", `${name}, "is", ${age}, "in", ${year}`);
+console.log(`Answer 6//\n ${name} is ${age} in ${year}`);
 
 // 07
 let isMarried = true;
 
 // 08
-name = isMarried ? console.log(`Anwser 8//\n`, `${name} is is married: true`) : console.log(`${name} is married: false`);
+console.log(`${name} is married: ${isMarried}`);
 
 // 09
 let programmingLanguage = "JawesomeJS";
 let isFun = true;
-let answer;
-
-answer = isFun ? `${programmingLanguage} is fun: true` : `${programmingLanguage} is fun: false`;
+let answer = `${programmingLanguage} is fun ${isFun}`;
 console.log("Anwser 8//\n", answer);
 
 // 10
