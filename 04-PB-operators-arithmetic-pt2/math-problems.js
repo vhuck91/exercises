@@ -7,7 +7,7 @@ let result = tiketPrice * tiketSold;
 
 console.log(
     new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 })
-    .format(result) + " USD"
+        .format(result) + " USD"
 );
 
 // q2
@@ -17,7 +17,7 @@ let paymentMonth = INCOME_SYLVIA * WEEK_DURATION;
 let payYear = paymentMonth * 12;
 console.log(
     new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 })
-    .format(payYear) + " USD"
+        .format(payYear) + " USD"
 );
 
 //q3
@@ -36,7 +36,7 @@ console.log(parSquare);
 let a = 5;
 let b = 6;
 let c = 7;
-let p = a + b +c;
+let p = a + b + c;
 console.log(p);
 
 // q6
@@ -47,14 +47,14 @@ console.log(areaSquare);
 // q7 ehe what
 
 //q8
-let volumeSquare = (9^4)
+let volumeSquare = (9 ^ 4)
 console.log(volumeSquare);
 
 // q9
-function percentage(num, per){
-return (num/100)*per;
+function percentage(num, per) {
+    return (num / 100) * per;
 }
-          
+
 let tipp1 = (percentage(22.35, 10));
 let tipp2 = (percentage(22.35, 10));
 let tipp3 = (percentage(22.35, 10));
