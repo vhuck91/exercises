@@ -16,14 +16,17 @@ console.log(txt3);
 
 // 04 add var w/ "txt4" >> print charSet= aSc f/ "txt4"
 let txt4 = "JavaScript";
-txt4 = txt4.substring(3, 6); // subString (startChar, endChar)
-console.log(txt4);
+/*txt4 = txt4.substring(3, 6); // subString (startChar, endChar)
+console.log(txt4);*/
+console.log(`uiwh:
+${txt4.substring(3, 6)}`);
 
 // 05 check var "txt5" if char = (l or| n) set t/ truth
 let txt5 = "nice shoes";
 let txtResultL = txt5.includes("l") ? "L is present" : "L is missing";
 let txtResultN = txt5.includes("n") ? "N is present" : "N is missing";
 console.log(txtResultL, "and", txtResultN);
+// console.log(`is l in the sentence: ${txt5,includes('l')} is n in the sentence ${txt5,includes('n')}`)
 
 // 06 add first char of var "txt6" :before & :after var
 let txt6 = "Bananas";
