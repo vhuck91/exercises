@@ -2,20 +2,22 @@
 
 // Case 1
 let determiner = 1;
-let x= ``
-
-x = determiner > 0 ? `Greter or equal 0` : `Less then 0`
-console.log(`//What is x\n`+ x);
+let x= null;
+if (determiner < 0){
+    x = `less than 0`;
+} else {
+    x = `greater or equal to 0`
+}
+console.log(x)
 
 // Case 2
 let updater = ``
 if (determiner >= 0){
     updater = `Greater or equal`;
     let massage = updater +  `[Positive integer]`
-    //console.log(massage)
+    // console.log(massage) (can be hádded here if i want to check what I am doing or debug)
 } else {
     updater = `Les than 0`;
-    let massage = updater + `[Positive integer]`
 }
 console.log(`//What is updater\n`+ updater); 
 // Anwser: if print msg. out side of it will be a defined var
@@ -23,19 +25,12 @@ console.log(`//What is updater\n`+ updater);
 // Case 3
 // Use ternary example if its a simple if else question
 let age = 18;
-if (age >= 18){
-    let statmentMSG = true;
-} else {
-    let statmentMSG = false;
-}
-console.log(`// Are you older then 18\n`, age >= 18 ? `U are` : `No U are not`)
 
-/*
-let dlc = ``;
-if (dlc === bought){
-    let bought = `You bought DLC`;
+if (age >= 18) {
+    console.log("i can vote");
+    drive = true;
 } else {
-    let notBought = `You can buy DLC`
+    console.log("i cannot vote");
+    drive = false;
 }
-console.log(dlc);
-*/
+console.log(`// Are you older then 18\n` + drive)
