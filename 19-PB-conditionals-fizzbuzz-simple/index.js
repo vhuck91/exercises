@@ -3,7 +3,7 @@
 const playFizzBuzz = (num) => {
     let isDivisible3 = (num % 3) === 0;
     let isDivisible5 = (num % 5) === 0;
-    let isDivisible4Both = ((num % 3) === 0 && (num % 5) === 0);
+    let isDivisible4Both = isDivisible3 && isDivisible5;
     let message = "";
 
     switch (true) {
@@ -17,11 +17,21 @@ const playFizzBuzz = (num) => {
             message = "Buzz";
             break;
         default:
-            message = "You lose!";
-            break;
-
+            message = num;
     }
     return message;
 }
 // Play here
 console.log(playFizzBuzz(7));
+// if else
+let fixNumber = 16;
+
+if (fixNumber % 3 === 0 && fixNumber % 5 === 0){
+    console.log("Fizz_buzz");
+} else if (fixNumber % 3 === 0){
+    console.log("Fiz");
+} else if (fixNumber % 5 === 0){
+    console.log("Buzz");
+} else {
+    console.log(fixNumber);
+}
