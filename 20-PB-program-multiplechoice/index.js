@@ -1,14 +1,5 @@
 "use strict";
-/* [lookup colors]
-
-let red = "C: Red";
-let blue = "C: Blue";
-let green = "C: Green";
-let yellow = "C: Yellow";
-*/
-
 // 1 Print Color
-
 let selectedColor = "red"
 
 switch (selectedColor) {
