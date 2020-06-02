@@ -5,7 +5,7 @@ let i = 0;
 
 while (i < 15) {
     console.log("Number", i);
-    i++
+    i++;
 }
 console.log(i + "\n");
 
@@ -21,12 +21,12 @@ while (number <= 20) {
 console.log("Sum is " + sum + "\n");
 
 
-// 3 do while loop count til 20
+// 3 do while loop count till 20
 let myNumber = "";
-i = "1"
+let addingValueI = "0"
 
 do {
-    myNumber += "My Number " + i + "\n";
-    i++
-} while(i < 20);
+    myNumber += "My Number " + addingValueI + "\n";
+    addingValueI++ // +1
+} while (addingValueI < 20); // smaller 20 is loop count
 console.log(myNumber);
