@@ -27,12 +27,6 @@ let addingValueI = "0"
 
 do {
     myNumber += "My Number " + addingValueI + "\n";
-<<<<<<< HEAD
-    addingValueI++; // +1
-} while (addingValueI < 20) // smaller 20 is loop count ; if true it will loop again
-console.log(myNumber);
-=======
     addingValueI++ // +1
 } while (addingValueI < 20); // smaller 20 is loop count
 console.log(myNumber);
->>>>>>> e27b9a6c9ec5cb6305a5f1313b7e9fe89e596d0c
