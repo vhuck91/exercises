@@ -16,7 +16,7 @@ let number = 1;
 
 while (number <= 20) {
     sum += number;
-    number++;
+    number++; //number + = 1 or number = Number +1
 }
 console.log("Sum is " + sum + "\n");
 
@@ -27,6 +27,6 @@ let addingValueI = "0"
 
 do {
     myNumber += "My Number " + addingValueI + "\n";
-    addingValueI++ // +1
-} while (addingValueI < 20); // smaller 20 is loop count
+    addingValueI++; // +1
+} while (addingValueI < 20) // smaller 20 is loop count ; if true it will loop again
 console.log(myNumber);
