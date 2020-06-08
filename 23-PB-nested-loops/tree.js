@@ -12,10 +12,10 @@ for (let i = 1; i <= sizeTree; i++) {
     }
     console.log(myString);
 }
-console.log("");
+console.log(); 
 
 
-// bonus
+// Mirror
 let sizeTree2 = 6;
 let myString2 = ""
 for (let i = 0; i <= sizeTree2; i++) {
@@ -25,7 +25,7 @@ for (let i = 0; i <= sizeTree2; i++) {
         myString2 += "_";
     }
     // Tree
-    for (let l = (sizeTree2); l >= i * 2; l--) {
+    for (let m = sizeTree2; m >= i * 2; m--) {
         myString2 += "*";
     }
     console.log(myString2);
