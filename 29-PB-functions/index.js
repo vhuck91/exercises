@@ -4,7 +4,7 @@
 const addUp = (numberX) => {
     let summe = 0;
 
-    for (let i = 0; i <= numberX; i++) {
+    for (let i = 1; i <= numberX; i++) {
         summe = summe + i;
     }
     return summe;
@@ -28,6 +28,9 @@ const cubed = (num1 = 0, num2 = 0, num3 = 0) => {
     return calcNum
 }
 
+// shorter version
+// const cubed = (num1 = 0, num2 = 0, num3 = 0) => num1 ** 3 + num2 ** 3 + num3 ** 3;
+
 let sumOfCubes = cubed(1, 5, 9);
 let sumOfCubes2 = cubed(2);
 let sumOfCubesEmpty = cubed();
@@ -38,35 +41,12 @@ console.log(sumOfCubesEmpty);
 
 console.log()
 // 3 Word starting with [var = true if  var[content] has [content]rest_of_word
-/* 
-bs from my site cuz I say that var1 & var2 are true rest is false 
-const dictionary = (string1, string2) => {
-    let result = string2.startsWith(string1) ? true : false;
-    return result;
-}
-*/
 
-// strict version if 100% true; includes capital or lowercase as property
-let dictionaryCheckMe = "bu"; // over write to check other parameters [tri] [beau]
+const stringStart = (init, word) => word.startsWith(init);
 
-const dictionary = "bu";
-const dictionary2 = "tri";
-const dictionary3 = "pastry";
+console.log("3:")
+console.log(stringStart("bu", "button"));
 
-
-function CompareString(language) {
-    if (dictionaryCheckMe.indexOf(language) >= 0) {
-        console.log(language + " [✓] True");
-    } else {
-        console.log(language + " [x] False");
-
-    }
-}
-
-CompareString(dictionary);
-/*  note requeres change in var const and let + output */
-
-// 
 let checkMe = "tri"; // check substring content
 const dictonary = "button";
 const dictonary2 = "triplet";
@@ -89,8 +69,8 @@ console.log(checkOne2);
 
 console.log();
 //4
-const numCheck = (num) =>{
-    if (num <= 0){
+const numCheck = (num) => {
+    if (num <= 0) {
         return true;
     } else {
         return false;
@@ -98,7 +78,11 @@ const numCheck = (num) =>{
 }
 
 const result = numCheck(3);
-console.log(result);
+const result2 = numCheck(0);
+const result3 = numCheck(-4);
+const result4 = numCheck(10);
+
+console.log(result, result2, result3, result4);
 
 
 console.log();
@@ -126,8 +110,13 @@ let firstCheck = countLetter(stringCheckI, letterCheck);
 console.log(firstCheck);
 
 // 6
-
-
+const calculateBaseToExponenent = (baseNumber = 0, exponentNumber = 0) =>
+    baseNumber ** exponentNumber;
+console
+const calculateBaseToExponent = (base = 0, exponent = 0) => {
+    return (base ** exponent);
+};
+console.log(`Task 6:`, calculateBaseToExponent(2, 3));
 
 console.log();
 // 7
@@ -142,19 +131,88 @@ const dogAge = (doggYears) => {
 const dogAgeResult = dogAge(4);
 console.log(dogAgeResult);
 
+
 // 8
+function calcSuppyCorrect(years, amount) {
+    const maxAge = 80;
+    if (years > maxAge) {
+        return "to old"
+    }
+    let leftYears = maxAge - years;
+    return leftYears * 365 * amount;
+}
+
+console.log(calcSuppyCorrect(25, 2));
 
 
 // 9
+const isWaldoHere = (myString) => {
+    let myNewString = '';
+    myNewString = myString;
+    
+    console.log(myNewString);
+    return myNewString.includes('waldo') || myNewString.includes('Waldo');
+}
 
+
+const myResult = isWaldoHere('is there wal here ?');
+console.log('is waldo here? ' + myResult);
+console.log('is waldo here? ' + isWaldoHere('is there wal here'));
+console.log('is waldo here? ' + isWaldoHere('waldo is here'));
 
 // 10
-
+const equalSlices = (slices, recipients, persons) => {
+    if (persons * recipients <= slices) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(equalSlices(11, 5, 3));
+console.log(equalSlices(8, 3, 2));
+console.log(equalSlices(8, 3, 3));
+console.log(equalSlices(24, 12, 2));
 
 // 11
-
+const xo = (myString) => {
+    let checkForX = 0; // "x"
+    let checkForO = 0; // "o"
+    let myNewString = myString.toLowerCase();
+    for (let position = 0; position < myNewString.length; position++) {
+        if (myNewString.charAt(position) === "x") {
+            checkForX++;
+        } else if (myNewString.charAt(position) === "o") {
+            checkForO++;
+        }
+    }
+    if (checkForO === checkForX) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(xo("ooxx"));// ➞ true
+console.log(xo("xooxx"));// ➞ false
+console.log(xo("ooxXm")); // ➞ true (case insensitive)
+console.log(xo("zpzpzpp")); // ➞ true (returns true if no x and o)
+console.log(xo("zzoo")); // ➞ false
 
 // 12
-
+const isPrime = (x) => {
+    if (x < 2) {
+        return false;
+    } else {
+        for (let i = 2; i < x; i++) {
+            if (x % i === 0) {
+                // console.log(i);
+                return false;
+            }
+        }
+    }
+    return true;
+}
+console.log('is it prime: ', isPrime(7));
+console.log('is it prime: ', isPrime(9));
+console.log('is it prime: ', isPrime(10));
 
 // 13
