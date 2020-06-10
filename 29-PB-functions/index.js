@@ -86,8 +86,9 @@ let checkOne2 = stringCheck(checkMe, dictonary2);
 let checkOne3 = stringCheck(checkMe, dictonary3);
 console.log(checkOne2);
 
-//4
 
+console.log();
+//4
 const numCheck = (num) =>{
     if (num <= 0){
         return true;
@@ -99,12 +100,36 @@ const numCheck = (num) =>{
 const result = numCheck(3);
 console.log(result);
 
-// 5
 
+console.log();
+// 5
+let stringCheckI = "this is a string";
+let letterCheck = "i";
+
+const countLetter = (string, letter) => {
+    let result = 0;
+
+    if (string.includes(letter)) {
+        for (let i = 0; i <= string.length; i++) {
+            if (string[i] === letter) {
+                result += 1;
+            };
+        }
+        return `Count ${result}x ${letter}`;
+    } else {
+        return `Your string does not contains ${letter}`;
+    }
+}
+
+let firstCheck = countLetter(stringCheckI, letterCheck);
+
+console.log(firstCheck);
 
 // 6
 
 
+
+console.log();
 // 7
 console.log();
 
@@ -119,7 +144,7 @@ console.log(dogAgeResult);
 
 // 8
 
-console.log(10 % 2)
+
 // 9
 
 
