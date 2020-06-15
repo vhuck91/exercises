@@ -41,11 +41,22 @@ console.log(sumOfCubesEmpty);
 
 console.log()
 // 3 Word starting with [var = true if  var[content] has [content]rest_of_word
+// check if word starts with same letters (given in a string)
 
 const stringStart = (init, word) => word.startsWith(init);
 
 console.log("3:")
 console.log(stringStart("bu", "button"));
+// same ass
+const stringStart = (init, word) => {
+    if (word.startsWith(init)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(stringStart("beau", "pastry"));
 
 let checkMe = "tri"; // check substring content
 const dictonary = "button";
@@ -110,13 +121,10 @@ let firstCheck = countLetter(stringCheckI, letterCheck);
 console.log(firstCheck);
 
 // 6
-const calculateBaseToExponenent = (baseNumber = 0, exponentNumber = 0) =>
-    baseNumber ** exponentNumber;
-console
 const calculateBaseToExponent = (base = 0, exponent = 0) => {
     return (base ** exponent);
 };
-console.log(`Task 6:`, calculateBaseToExponent(2, 3));
+console.log(`Task 6:`, calculateBaseToExponent(5, 5)); //3125
 
 console.log();
 // 7
@@ -149,7 +157,7 @@ console.log(calcSuppyCorrect(25, 2));
 const isWaldoHere = (myString) => {
     let myNewString = '';
     myNewString = myString;
-    
+
     console.log(myNewString);
     return myNewString.includes('waldo') || myNewString.includes('Waldo');
 }
@@ -191,8 +199,8 @@ const xo = (myString) => {
         return false;
     }
 }
-console.log(xo("ooxx"));// ➞ true
-console.log(xo("xooxx"));// ➞ false
+console.log(xo("ooxx")); // ➞ true
+console.log(xo("xooxx")); // ➞ false
 console.log(xo("ooxXm")); // ➞ true (case insensitive)
 console.log(xo("zpzpzpp")); // ➞ true (returns true if no x and o)
 console.log(xo("zzoo")); // ➞ false
