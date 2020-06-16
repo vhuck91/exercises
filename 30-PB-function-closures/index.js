@@ -14,18 +14,25 @@ let sum = add(3)(4);
 console.log(sum);
 
 // 2 closure function with multiply and outer function stored in var then called
-function multiply(numberN1) {
+// anonomys, save var to function 
+const multiply = function (numberN1) {
 
-    function multiSum(numberN2) { // function of sum
+    return function multiSum(numberN2) { // function of sum
         return numberN1 * numberN2; // use return to calc
     }
-    return multiSum; // print / quicksave result
 
 }
 
-const multiplyByN = multiply(3)(4) // function called + stored in var of const multiplyByN
-console.log(multiplyByN);
+console.log(multiply(3)(4));
+// arrow function
+/* 
+const multiply = numberN1 => {
+    return secondNumber => numberN1 * numberN2;
+}
 
+let result = multiply(3)(4);
+console.log(result);
+*/
 
 // 3 Calculate saved money till date(numX)
 
