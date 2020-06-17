@@ -3,10 +3,6 @@
 let myArray = ["🤍", 25, 4, 5, "❏"];
 console.log(myArray);
 
-/* // 1 select array
-let myArraySelectOne = ["hello", 25, 4, 5, "Number 27"];
-console.log(myArray[2]); */
-
 // 2 User 3rd Array inside a var thirdElement
 let thirdElement = myArray[2]; // [numSelect = array] ps array also counts from 0
 console.log(thirdElement);
