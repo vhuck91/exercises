@@ -19,3 +19,7 @@ console.log(average(0)); // -> 0
 console.log(average(1, 2)); // -> 1.5
 console.log(average(1, 3, 6, 10)); // -> 5
 console.log(average(12, 14, 16)); // -> 14
+
+// without loop
+
+
