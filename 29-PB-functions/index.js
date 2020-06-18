@@ -99,7 +99,7 @@ console.log(result, result2, result3, result4);
 console.log();
 // 5
 let stringCheckI = "this is a string";
-let letterCheck = "i";
+let letterCheck = "i"  "s";
 
 const countLetter = (string, letter) => {
     let result = 0;

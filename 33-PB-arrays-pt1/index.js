@@ -4,7 +4,7 @@ const euroCities = ["Paris", "London", "Valletta", "Prague", "Rome"];
 console.log(euroCities);
 
 
-// 1b add new var with string of Brlin
+// 1b take second city(array) and print it out in second item var
 let secondItem = euroCities[1];
 console.log(secondItem);
 console.log();
