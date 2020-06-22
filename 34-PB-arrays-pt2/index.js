@@ -1,25 +1,26 @@
 "use strict";
 
-// task 1
+// task
+// compare aray with string >> display highestN in array[]
+const findGreatest = (array, num) => {
+    let result = "";
+    
+    for (const outPutValue of array) {
+        if (outPutValue > num) {
+            result += outPutValue;
+        }
+    }
+    return result;
+}
+
+const greatestN = findGreatest([3, 4, 5], 4);
+
+console.log("What is the greatest Number?")
+console.log("it's Nr."+ greatestN+"\n" )
+
 
 // task 2
 // get longest word of array
-/* function longestWord(str) {
-    let getLongestWord = "";
-    let word = str.split(" ") // add space bar inside string of split other wise each character will be seen as word
-
-    for (let i = 0; i < word.length; i += 1) {
-        let oneWord = word[i];
-
-        if (oneWord.lenght > getLongestWord.length) {
-            getLongestWord = oneWord;
-        }
-    }
-    return getLongestWord;
-}
-
-console.log(longestWord("this is a web development course")); */
-
 function longest(string) {
     let words = string.split(" ");
     return words.reduce((prev, next) => prev.length > next.length ? prev : next);
@@ -37,7 +38,6 @@ function longest(string) {
     return longestWord;
 }
 let longWord = countLongestWord("this is a web development course");  */
-
 
 console.log("Longest word of array?")
 console.log(longest("this is a web development course"), "= longest word\n");
@@ -71,6 +71,24 @@ function vowelCount(strVowel) {
 console.log("how many Vowels are present in string?");
 console.log(vowelCount("this is a string"))
 // task 5
+// count letter i in stri
+let letterCheck = "i";
+
+const countLetter = (array, letter) => {
+    let result = 0;
+
+    if (array.includes(letter)) {
+        for (let i = 0; i <= array.length; i++) {
+            if (array[i] === letter) {
+                result += 1;
+            };
+        }
+        return `Count ${result}x ${letter}`;
+    }
+}
+
+let firstCheck = countLetter("this is a string", letterCheck);
+console.log(firstCheck);
 
 // task 6
 // calc the cubes of given nunbers, cube = 3
@@ -88,3 +106,27 @@ console.log("Return cube of Numbers inside an array")
 console.log("CubeN is", calcSumN, "\n");
 
 // task 7
+// Check if array matches defined letters on start
+const dictionary = (string, array) => {
+    let compareArray = [];
+
+    for (let i = 0; i < array.length; i++){
+        array[i].includes(string) ? compareArray.push(array[i]) : "";
+    }
+    return compareArray;
+}
+
+console.log(dictionary("bu", ["button", "breakfast", "border"]));
+
+// task 8
+// genarate evenN numbers based on array input
+const evenN = number => {
+    const outputArray = [];
+
+    for (let i = 1; i <= number; i++) {
+        i % 2 === 0 ? outputArray.push(i) : "";
+    }
+    return outputArray;
+}
+
+console.log(evenN(8));
