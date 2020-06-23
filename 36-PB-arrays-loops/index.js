@@ -6,13 +6,13 @@ const sum = (array) => {
 
     let sumReseult = 0;
 
-    for (let numN of array) {
-        if (parseFloat(numN)) sumReseult += parseFloat(numN);
+    for (let numN of array) { // instead of let i =0; i < arr.length; 1++
+       sumReseult += parseFloat(numN);
     }
     return sumReseult + " Is the result if we add up " + array + " together\n"
 }
 console.log("Task 1")
-console.log(sum([1, 4.4, 3]))
+console.log(sum([1, 4, 3, 0]))
 
 
 // 2) creat array that returns all own content in a loop e.g. Hallo Mark!, Hallo Steven!
@@ -20,8 +20,8 @@ console.log("Task 2")
 const nameX = (array) => {
     let namesGiven = array;
 
-    for (let i in namesGiven) {
-        console.log("Hallo " + namesGiven[i] + "!");
+    for (let names in namesGiven) {
+        console.log("Hallo " + namesGiven[names] + "!");
     }
 }
 nameX(["Frank", "tom"]);
@@ -62,15 +62,17 @@ console.log()
 
 // 4) add +1 to each number in array Numbers have to be even for set true;
 console.log("Task 4")
+
 const oddsAndEvens = (array) => {
+    let myArray = [];
     for (let i = 0; i < array.length; i++) {
         if (array[i] % 2 === 0) {
-            array[i]--;
+            myArray.push(array[i]- 1)
         } else {
-            array[i]++;
+            myArray.push(array[i]+ 1);
         }
     }
-    return array;
+    return myArray;
 }
 
 console.log(oddsAndEvens([3, 5, 2, 4]));
@@ -102,6 +104,38 @@ const unique = array => {
     return unique;
 }
 
-console.log(unique([1, 4, 4, 7, 7, 7]));
-console.log(unique([1, 6, 6, 9, 9]));
-console.log(unique([2, 2, 2, 2, 2, 2]));
+console.log(noDuplicates([1, 6, 6, 9, 9])); // ➞ [1, 6, 9]
+console.log(noDuplicates([2, 2, 2, 2, 2, 2])); // ➞ [2]
+console.log(noDuplicates([5, 10, 15, 20, 25])); // ➞ [5, 10, 15, 20, 25]
+console.log();
+
+// right solution
+function noDuplicates(array) {
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) {
+        if (newArray.indexOf(array[i]) === -1) {
+            // we don't have it already
+            newArray.push(array[i]);
+            // we push it once!
+        }
+    }
+    return newArray;
+}
+console.log(noDuplicates([1, 6, 6, 9, 9])); // ➞ [1, 6, 9]
+console.log(noDuplicates([2, 2, 2, 2, 2, 2])); // ➞ [2]
+console.log(noDuplicates([5, 10, 15, 20, 25])); // ➞ [5, 10, 15, 20, 25]
+
+
+// 7
+console.log("\n7:");
+
+const repeatIt = (item, times = 1) => {
+    const OUTPUT_ARRAY = [];
+
+    for (let i = 1; i <= times; i++) {
+        OUTPUT_ARRAY.push(item);
+    }
+    return OUTPUT_ARRAY;
+}
+
+console.log(repeatIt("example", 3)); //➞["example", "example", "example"]
