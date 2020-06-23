@@ -36,7 +36,7 @@ const amplify = number => {
     const outputArray = [];
 
     for (let i = 1; i <= number; i++) {
-        i % 4 === 0 ? outputArray.push(i) : outputArray.push(i * 10);
+        i % 4 !== 0 ? outputArray.push(i) : outputArray.push(i * 10);
     }
     return outputArray;
 }
@@ -46,8 +46,23 @@ console.log(amplify(3));
 console.log(amplify(25));
 
 
-// 4 write function that 
+// 4 write function that display unique character
+function unique(array) {
+    let number = array[0];
 
+    for (let i = 0; i < array.length - 1; i++) {
+        if (array[i-1] !== array[i]) {
+            number = array[i-1];
+        }
+    }
+    return number;
+}
+
+console.log(unique([3, 3, 3, 7, 3, 3]));
+console.log(unique([0, 0, 0.77, 0, 0]));
+console.log(unique([0, 1, 1, 1, 1, 1, 1, 1]));
+
+/* // display all unic charecters in array only once
 const unique = array => {
     function onlyUnique(value, index, self) {
         return self.indexOf(value) === index;
@@ -59,7 +74,7 @@ const unique = array => {
 
 console.log(unique([3, 3, 3, 7, 3, 3]));
 console.log(unique([0, 0, 0.77, 0, 0]));
-console.log(unique([0, 1, 1, 1, 1, 1, 1, 1]));
+console.log(unique([0, 1, 1, 1, 1, 1, 1, 1])); */
 
 
 // 5 rank words bbased on letters
