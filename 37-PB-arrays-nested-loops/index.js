@@ -16,6 +16,21 @@ const starNestedArray = (character, lines) => {
     return "";
 }
 
+/* // alternativ
+const halfPyramid = (lines) => {
+    let array = [];
+
+    for (let i = 0; i < lines; i++) {
+        for (let j = 0; j <= i; j++) {
+            array.push("*")
+        }
+        array.push("\n")
+    }
+    return array.join("")
+}
+
+console.log(halfPyramid(3)) */
+
 console.log(starNestedArray("+", 4));
 console.log()
 // 2) loop charecters of array from outer loop 
@@ -34,12 +49,14 @@ const numArray = (array) => {
 
         for (let j = 0; j < array[i].length; j++) {
             console.log(arr[i][j]);
-        } 
+        }
     }
 }
 
 numArray(arr);
 console.log()
+
+
 // 3) put out loops with diffrent 
 // pattern 1 = numN 3x in loop with NumX
 // pattern 2 = 0-4 print 3
@@ -55,8 +72,8 @@ const numNArray = (times, numN) => {
             for (let j = 0; j <= Math.abs(numN); j++) {
                 outputArray.push(j);
             }
-            
-        } 
+
+        }
     }
     return outputArray.join("");
 }
