@@ -90,6 +90,15 @@ const freeShipping = (obj) => {
     return sum > 50;
 }
 
+// or 
+function freeShipping2(object){
+    let total = 0;
+    for (const key in object){
+        total += object[key]
+    }
+    return total > 50;
+}
+
 console.log('ex 5', freeShipping({"Sponge": 3.50, "Soap": 5.99}));
 console.log('ex 5', freeShipping({"Surround Sound Equipment": 499.99}));
 console.log('ex 5', freeShipping({
@@ -99,15 +108,40 @@ console.log('ex 5', freeShipping({
 }));
 
 //6
-const programm = {
-    languages: ["JavaScript", "Python", "Ruby"],
-    isChallenging: true,
-    isRewarding: true,
-    difficulty: 8,
-    jokes: "http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke",
-    method: function () {
-        if (this.isChallenging && this.isRewarding === true) {
-            return `Learning the programming languages: ${this.languages} is rewarding and challenging.`;
+const changeProgramming = () => {
+    // making it unchangable by other code by giving it local scope || with Object.freeze(programming) the direct contents will be unchangable, with child objects as an exception
+    const programming = {
+        languages: ["JavaScript", "Python", "Ruby"],
+        isChallenging: true,
+        isRewarding: true,
+        difficulty: 8,
+        jokes: "http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke"
+    };
+
+    programming.languages.push("Go");
+    programming.difficulty = 7;
+    delete programming.jokes;
+    programming.isFun = true;
+    for (let each in programming.languages) {
+        console.log(programming.languages[each]);
+    }
+    console.log();
+    for (let each in programming){
+        console.log(each);
+    }
+    console.log();
+    for (let each in programming) {
+        console.log(programming[each]);
+    }
+    programming.isReCh = function () {
+        if (this.isRewarding === true && this.isChallenging === true) {
+            return `Learning the programming languages: ${programming.languages.join(", ")} is rewarding and challenging.`;
         }
     }
-};
+    console.log(programming.isReCh());
+
+    console.log(programming.isReCh); // [Function (anonymous)]
+    // It returns that it's a function and it's name || '(anonymous)' if no name is given; because of ECMA definition
+}
+
+changeProgramming();
