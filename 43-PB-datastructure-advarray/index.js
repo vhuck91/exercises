@@ -17,7 +17,7 @@ const orders = [{
 
 const sumN = arr => {
     let sum = 0;
-    
+
     for (let each of arr) {
         sum += each.amount;
     }
@@ -50,7 +50,7 @@ const filterItems = (arr, str) => {
     let output = arr.filter(word => word.includes(str));
 
     output = output.map(word => word[0].toUpperCase() + word.slice(1));
-        return output;
+    return output;
 }
 
 console.log(filterItems(friends, 'ka')); // ["Rika"];
@@ -73,3 +73,76 @@ const squRoot = arr =>
     arr.map(num => Math.sqrt(num));
 
 console.log(squRoot(numberN));
+
+
+//Bonus animals
+const source = [{
+        cow: "🐮",
+        potato: "🍠",
+        chicken: "🐔",
+        corn: "🌽"
+    }, // source
+
+];
+
+const cooked = source.map(function () {
+    return {
+        cow: "🍔",
+        potato: "🍟",
+        chicken: "🍗",
+        corn: "🍿"
+    }; // end result
+});
+
+console.log(cooked);
+
+// right way
+let first = ['🐮', '🍠', '🐔', '🌽'];
+
+function cook(value) {
+    if (value === '🐮') {
+        return '🍔'
+    } else if (value === '🍠') {
+        return '🍟'
+    } else if (value === '🐔') {
+        return '🍗'
+    } else if (value === '🌽') {
+        return '🍿'
+    }
+}
+
+const after = first.map(cook);
+
+console.log(after);
+
+// vegetarian
+const isVegetarian(value) => {
+    return (value === '🍿' || value === '🍟');
+});
+
+const vegetarianFood = processedFood.filter(isVegetarian);
+
+console.log(isVegetarian);
+
+// REDUCE 
+
+function eat(prevValue, currentValue) {
+    //if(prevValue || currentValue) {
+    return '💩';
+    //}
+}
+const finalOutput = processedFood.reduce(eat);
+// const empty = [].reduce(eat); empty Array not possible by default 
+console.log(finalOutput);
+//console.log(empty);
+
+// forEach again version
+const array1 = ['a', 'b', 'c'];
+// developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+function consoleLog(el, index, array) {
+    array[index] = el.toUpperCase();
+    console.log(el);
+}
+
+array1.forEach(consoleLog);
+console.log(array1);
