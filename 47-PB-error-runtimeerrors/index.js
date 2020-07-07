@@ -18,6 +18,22 @@ fido.bark();
 //2
 console.log("\nTask 2:");
 
+const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+
+const getMonthName = (num) => {
+    try {
+        if (num <= 12) {
+            return months[num - 1];
+        } else {
+            throw new Error('Invalid Month Number!');
+        }
+
+    } catch (e) {
+        return e;
+    }
+}
+console.log(getMonthName(13));
+console.log(getMonthName(12));git 
 
 
 
@@ -34,7 +50,7 @@ function reverseString(str) {
         return e;
     }
 }
-console.log("\nTask 3:");
+
 console.log(reverseString("How are you?"));
 console.log(reverseString(15));
 console.log(reverseString(true));
