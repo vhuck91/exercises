@@ -33,7 +33,7 @@ const getMonthName = (num) => {
     }
 }
 console.log(getMonthName(13));
-console.log(getMonthName(12));git 
+console.log(getMonthName(12));
 
 
 
