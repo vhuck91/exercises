@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Guessing Game</title>
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -18,8 +21,33 @@
         <li>Guess a number from 1-10 in the prompt.</li>
         <li>You have three attempts to guess the correct number!</li>
         <li>Good luck!</li>
-
     </ul>
+
+    <div class="form">
+        <label for="guessField">Enter a guess: </label>
+        <input type="text" id="guessField" class="guessField">
+        <input type="submit" value="Submit guess" class="guessSubmit" id="submitguess">
+    </div>
+
+    <script type="text/javascript">
+        let y = Math.floor(Math.random() * 10 + 1);
+        let guess = 1; // count numbers of try
+
+        document.getElementById("submitguess").onclick = function () {
+            // number guessed by user      
+            let x = document.getElementById("guessField").value;
+
+            if (x == y) {
+                alert("Success! The number was Correct " + guess + " GUESS ");
+            } else if (x > y) { // if guessed number is greater than actual number
+                guess++;
+                alert("Try a smaller number");
+            } else {
+                guess++;
+                alert("Try bigger number")
+            }
+        }
+    </script>
 </body>
 
 </html>
