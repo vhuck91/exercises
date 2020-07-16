@@ -37,7 +37,7 @@
             // number guessed by user      
             let x = document.getElementById("guessField").value;
 
-            if (x == y) {
+            if (x === y) {
                 alert("Success! The number was Correct " + guess + " GUESS ");
             } else if (x > y) { // if guessed number is greater than actual number
                 guess++;
